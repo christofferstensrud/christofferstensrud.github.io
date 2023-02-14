@@ -50,7 +50,7 @@ jobs:
       - name : Build
         run : npm run build
       - name: Print name of workshop
-        run: echo "The workshop is $NAME! What is thi? $SECRET"
+        run: echo "The workshop is $NAME! What is this? $PASSWORD"
         env:
           NAME: "Accenture Workshop"
           PASSWORD: ${{ secrets.PASSWORD }}

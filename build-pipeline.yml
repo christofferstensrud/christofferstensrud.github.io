@@ -50,9 +50,10 @@ jobs:
       - name : Build
         run : npm run build
       - name: Print name of workshop
-        run: echo "The workshop is $NAME!"
+        run: echo "The workshop is $NAME! What is thi? $SECRET"
         env:
           NAME: "Accenture Workshop"
+          SECRET: "shhh this is a secret"
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:

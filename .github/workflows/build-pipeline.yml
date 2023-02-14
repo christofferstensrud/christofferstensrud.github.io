@@ -35,10 +35,6 @@ jobs:
         run: npm run lint:ts
       - name: Run styles lint and format check
         run: npm run lint:css
-      - name: Print name of workshop
-        run: echo "The workshop is $NAME!"
-        env:
-          NAME: "Accenture Workshop"
   deploy:
     needs: test
     runs-on: ubuntu-latest
@@ -53,6 +49,10 @@ jobs:
       # Step 2: Add deploy to Github pages here! Hot tip - The solution is in the Readme
       - name : Build
         run : npm run build
+      - name: Print name of workshop
+        run: echo "The workshop is $NAME!"
+        env:
+          NAME: "Accenture Workshop"
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:

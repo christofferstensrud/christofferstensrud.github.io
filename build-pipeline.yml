@@ -53,7 +53,7 @@ jobs:
         run: echo "The workshop is $NAME! What is thi? $SECRET"
         env:
           NAME: "Accenture Workshop"
-          SECRET: "shhh this is a secret"
+          PASSWORD: ${{ secrets.PASSWORD }}
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:

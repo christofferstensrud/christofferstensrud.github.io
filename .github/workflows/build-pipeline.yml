@@ -37,8 +37,8 @@ jobs:
         run: npm run lint:css
       - name: Print name of workshop
         run: echo "The workshop is $NAME!"
-      - env:
-        - NAME: "Accenture Workshop"
+        env:
+          NAME: "Accenture Workshop"
   deploy:
     needs: build
     runs-on: ubuntu-latest

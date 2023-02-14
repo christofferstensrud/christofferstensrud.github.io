@@ -19,7 +19,7 @@ jobs:
         run: npm ci
       # Step 3 - Add tests and linting here
   test:
-    needs: deploy
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -40,7 +40,7 @@ jobs:
         env:
           NAME: "Accenture Workshop"
   deploy:
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
